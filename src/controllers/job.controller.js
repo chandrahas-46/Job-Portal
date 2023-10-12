@@ -18,14 +18,6 @@ class JobPortalController {
         // const id=2;
         const jobFound = PostJobModel.getById(id);
         const alreadyAppliedApplicants = PostAplicantModel.count();
-        // console.log(jobFound.requiredSkills.length); 
-        // if (jobFound) {
-        //     res.render('jobDetailsPage', {
-        //         job: jobFound,
-        //         errorMessage: null,
-        //         alreadyAppliedApplicants,
-        //     });
-        // }
         if (jobFound) {
             res.render('jobDetailsPage', {
                 job: jobFound,
