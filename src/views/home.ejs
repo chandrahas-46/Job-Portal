@@ -1,0 +1,48 @@
+<div>
+    <div class="container-lpage">
+        <div class="container main">
+            <div class="left p-2">
+                <h1 class="main-heading">A comprehensive platform for reliable</h1>
+                <h2 class="text-white ml12">job opportunities and internships.</h2>
+                <h5 class="text-white">Get Discovered. Get Hired.</h5>
+                <div class="actions">
+                    <a href="/jobs" class="btn btn-lg lbtn"> I'm A Job Seeker </a>
+                    <a href="/login" class="btn btn-lg lbtn"> I'm a Recruiter </a>
+                    <!-- <button type="button" class="btn btn-primary btn-lg lbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">I'm
+                        a Recruiter</button> -->
+                </div>
+            </div>
+            <div class="right">
+                <img src="images/banner.png" alt="banner" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var textWrapper = document.querySelector(".ml12");
+        textWrapper.innerHTML = textWrapper.textContent.replace(
+            /\S/g,
+            "<span class='letter'>$&</span>"
+        );
+
+        anime
+            .timeline({ loop: true })
+            .add({
+                targets: ".ml12 .letter",
+                translateX: [40, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 500 + 30 * i,
+            })
+            .add({
+                targets: ".ml12 .letter",
+                translateX: [0, -30],
+                opacity: [1, 0],
+                easing: "easeInExpo",
+                duration: 1100,
+                delay: (el, i) => 100 + 30 * i,
+            });
+    </script>
+</div>
