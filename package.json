@@ -5,6 +5,7 @@
   "description": "job portal application",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js -e js, ejs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chandrahas",
